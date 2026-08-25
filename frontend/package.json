@@ -1,0 +1,16 @@
+{
+  "name": "aeros-frontend",
+  "version": "1.0.0",
+  "description": "Modern flight booking and management dashboard for Aeros microservices architecture",
+  "scripts": {
+    "start": "npx serve -l 3000 ."
+  },
+  "keywords": [
+    "aeros",
+    "microservices",
+    "flight-booking",
+    "spring-boot"
+  ],
+  "author": "Sai-Inapakolla",
+  "license": "MIT"
+}

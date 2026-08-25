@@ -18,15 +18,17 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
 @EnableJpaAuditing
+@EnableConfigurationProperties({DataSourceProperties.class, JpaProperties.class, HibernateProperties.class})
 public class JpaConfiguration {
 
-    @Value("${spring.jpa.entity-packages-to-scan}")
+    @Value("${spring.jpa.entity-packages-to-scan:io.bookingmicroservices}")
     private String entityPackagesToScan;
 
     @Bean

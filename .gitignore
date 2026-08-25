@@ -36,8 +36,14 @@ replay_pid*
 /.settings/
 
 # Maven build directory
-/target
+target/
+**/target/
+
+# Node modules
+node_modules/
+**/node_modules/
 
 # OS-specific files
 .DS_Store
 Thumbs.db
+

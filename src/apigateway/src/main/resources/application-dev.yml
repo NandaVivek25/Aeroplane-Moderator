@@ -1,13 +1,11 @@
 spring:
   application:
     name: api.gateway
-
   security:
     oauth2:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:8080/realms/keycloak-realm/protocol/openid-connect/certs
-
   cloud:
     gateway:
       routes:
@@ -29,7 +27,16 @@ spring:
             - Path=/api/{version}/booking/**
           filters:
             - TokenRelay
-
+  datasource:
+    url: jdbc:h2:mem:gatewaydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+    entity-packages-to-scan: io.bookingmicroservices
 
 server:
   port: 8081
