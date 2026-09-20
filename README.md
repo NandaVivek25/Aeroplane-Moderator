@@ -1,6 +1,4 @@
-# Aeroplane_Moderator ✈️
-
-Aeros is a distributed flight booking system built with a modern microservices architecture using Java Spring Boot.
+ **Aeroplane_Moderator - A Flight Booking Simulator** is a distributed flight booking system built with a modern microservices architecture using Java Spring Boot.
 
 ## Overview
 
